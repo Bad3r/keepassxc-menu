@@ -39,9 +39,14 @@ script.
 
 ## Usage
 
-Provide a config file at `~/.config/keepassxc-menu/config` which should contain
-at least `kpxc_database_path` variable. This is just a tcl file which will be
-sourced. The following variables may be defined:
+Provide a config file as either
+
+1. the first and only commandline argument to the script
+2. in `~/.config/keepassxc-menu/config`
+
+This is just a tcl file which will be sourced.
+This config file should at least contain the `kpxc_database_path` variable.
+The following variables may be defined:
 
 - `kpxc_database_path`: Path to the keepassxc database you intend to use.
 - `kpxc_menu`: A program accepting input in the same manner as `dmenu` would.

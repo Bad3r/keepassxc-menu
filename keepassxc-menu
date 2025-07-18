@@ -19,7 +19,12 @@ proc die {msg} {
     exit 1
 }
 
-set config $::env(HOME)/.config/keepassxc-menu/config
+if {$argc > 0} {
+    set config [lindex $argv 0]
+} else {
+    set config $::env(HOME)/.config/keepassxc-menu/config
+}
+
 if {[file exists $config]} {
     source $config
 } else {
